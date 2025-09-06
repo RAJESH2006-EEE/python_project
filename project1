@@ -1,0 +1,27 @@
+from abc import ABC,abstractmethod
+
+class Cinema(ABC):
+    def __init__(self,movie_name,seat_no,):
+        self.movie_name=movie_name
+        self.seat_no=seat_no
+        self.__price=0
+    def get_price(self):
+        return self.__price
+    def set_price(self,price):
+        self.__price=price
+    @abstractmethod
+    def calculate_ticket(self):
+        pass
+    def show_time(self):
+        print(f"movie_name={self.movie_name},seat_no={self.seat_no},price={self.__price}")
+class Noramlticket(Cinema):
+    def calculate_ticket(self):
+        self.set_price(150)
+        print("ticket is booked successfully")
+class Premiumticket(Cinema):
+    def calculate_ticket(self):
+        self.set_price(2000)
+        print("ticket is booked successfully")
+ob1=Premiumticket("pushpa","A0")
+ob1.calculate_ticket()
+ob1.show_time()
