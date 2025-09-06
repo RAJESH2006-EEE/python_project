@@ -1,6 +1,6 @@
 from abc import ABC,abstractmethod
 
-class Cinema(ABC):
+class Theater(ABC): //The class file Cinema is change as Theater
     def __init__(self,movie_name,seat_no,):
         self.movie_name=movie_name
         self.seat_no=seat_no
@@ -18,7 +18,7 @@ class Noramlticket(Cinema):
     def calculate_ticket(self):
         self.set_price(150)
         print("ticket is booked successfully")
-class Premiumticket(Cinema):
+class Premiumticket(Theater)://if we want to access the parent we use the parent class name but now is changed as Theater
     def calculate_ticket(self):
         self.set_price(2000)
         print("ticket is booked successfully")
