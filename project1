@@ -22,6 +22,6 @@ class Premiumticket(Theater)://if we want to access the parent we use the parent
     def calculate_ticket(self):
         self.set_price(5000)//the premium ticket amount is raise as 5000
         print("ticket is booked successfully")
-ob1=Premiumticket("pushpa","A0")
+ob1=Premiumticket("coolie","A0")//movie name is changed as coolie
 ob1.calculate_ticket()
 ob1.show_time()
